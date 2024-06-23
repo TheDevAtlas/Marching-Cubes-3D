@@ -23,12 +23,12 @@ public class CubeScroll : MonoBehaviour
         {
             for (int y = 0; y < cubeCount; y++)
             {
-                for (int z = 0; z < cubeCount; z++)
+                for (int z = 0; z < 1; z++)
                 {
                     Vector3 position = new Vector3(
                         (x - cubeCount / 2) * cubeSize,
                         (y - cubeCount / 2) * cubeSize,
-                        (z - cubeCount / 2) * cubeSize
+                        (z - 1 / 2) * cubeSize
                     );
 
                     GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
@@ -59,7 +59,7 @@ public class CubeScroll : MonoBehaviour
         {
             for (int y = 0; y < cubeCount; y++)
             {
-                for (int z = 0; z < cubeCount; z++)
+                for (int z = 0; z < 1; z++)
                 {
                     Vector3 position = originalPositions[x, y, z];
                     Material cubeMaterial = cubes[x, y, z].GetComponent<Renderer>().material;
