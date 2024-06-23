@@ -16,6 +16,7 @@ public class PlanetThumb : MonoBehaviour
     public float dirtNoiseScale = 0.1f;
     public float grassNoiseScale = 0.15f;
     public Vector3 offset;
+    public Vector3 offsetSpeed;
 
     List<Vector3> vertices = new List<Vector3>();
     List<int>[] submeshTriangles;
@@ -31,6 +32,13 @@ public class PlanetThumb : MonoBehaviour
         for (int i = 0; i < submeshTriangles.Length; i++)
             submeshTriangles[i] = new List<int>();
 
+        CreatePlanetData();
+        GenerateMesh();
+    }
+
+    private void Update()
+    {
+        offset += offsetSpeed * Time.deltaTime;
         CreatePlanetData();
         GenerateMesh();
     }
@@ -90,6 +98,11 @@ public class PlanetThumb : MonoBehaviour
 
     void GenerateMesh()
     {
+        vertices = new List<Vector3>();
+        submeshTriangles = new List<int>[3]; // Create three lists for core, dirt, and grass
+        for (int i = 0; i < submeshTriangles.Length; i++)
+            submeshTriangles[i] = new List<int>();
+
         for (int x = 0; x < chunkSize; x++)
         {
             for (int y = 0; y < chunkSize; y++)
