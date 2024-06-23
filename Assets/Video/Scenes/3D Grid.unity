@@ -141,7 +141,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &155173064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -176,8 +176,8 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: f7bc40cd17ddca44c95eaa000e8c4413, type: 2}
+  - {fileID: 2100000, guid: 1d2befe2e93ff4f41b8b25ded2ebde7c, type: 2}
   - {fileID: 2100000, guid: 4067579b32591b54bb8719d1f055818e, type: 2}
-  - {fileID: 2100000, guid: 18056df5fcbb71040a82e7814cd325b4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -261,7 +261,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &386929349
 Transform:
   m_ObjectHideFlags: 0
@@ -532,7 +532,7 @@ Camera:
   far clip plane: 1000
   field of view: 78.8
   orthographic: 1
-  orthographic size: 12
+  orthographic size: 31.58
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
